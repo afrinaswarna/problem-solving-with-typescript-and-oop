@@ -49,8 +49,8 @@ _Common Narrowing Techniques:_
 1. typeof : Checking typeof value === "string" allows the compiler to treat the value as a string safely.
 
 ```ts
-type Alphanumeric = number | string;
-const add = (num1: Alphanumeric, num2: Alphanumeric) => {
+type numberOrString = number | string;
+const add = (num1: numberOrString, num2: numberOrString) => {
   if (typeof num1 === "number" && typeof num2 === "number") {
     return num1 + num2;
   } else {
